@@ -1,5 +1,6 @@
 import requests
 import json
+#function to fetch data from the API and save it to a JSON file
 def get_posts():
     url='https://jsonplaceholder.typicode.com/posts'
 
@@ -21,7 +22,7 @@ def get_posts():
     except requests.RequestException as e:
         print(f"Error fetching posts: {e}")
         return None
-
+#main function to call the get_posts function and print the results
 def main():
     posts=get_posts()
     if posts:
